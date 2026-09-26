@@ -1,0 +1,146 @@
+.stack {
+  --space: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  gap: var(--space, 1.5rem);
+}
+
+.stack>* {
+  margin-block: 0;
+}
+
+
+.center {
+  box-sizing: content-box;
+  max-inline-size: 60ch;
+  margin-inline: auto;
+  padding-inline-start: var(--s1, 1.5rem);
+  padding-inline-end: var(--s1, 1.5rem);
+}
+
+.box {
+
+  --padding: 1.5rem;
+  padding: var(--padding);
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #1e293b;
+  border-radius: 0.5rem;
+
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+}
+
+.box[data-invert='true'] {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+.box[data-padding='none'] {
+  --padding: 0;
+}
+
+.box[data-padding='small'] {
+  --padding: 0.75rem;
+}
+
+.box[data-padding='normal'] {
+  --padding: 1rem;
+}
+
+.box[data-padding='large'] {
+  --padding: 3rem;
+}
+
+.box[data-border='none'] {
+  border: none;
+}
+
+.box[data-radius='none'] {
+  border-radius: 0;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: 0;
+}
+
+
+#main {
+  box-sizing: border-box;
+  width: 100%;
+  max-inline-size: clamp(23.4375rem, calc(11.0294rem + 55.147vw), 37.5rem);
+  --padding: clamp(1.5rem, calc(0.6176rem + 3.922vw), 2.5rem);
+  --space: clamp(1.5rem, calc(1.059rem + 1.961vw), 2rem);
+}
+
+.header {
+  justify-content: start;
+
+  .header-icon {
+    width: clamp(1.5rem, calc(0.893rem + 2.696vw), 2.188rem);
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+.accordion {
+  --space: 1.5rem;
+}
+
+.accordion > h2:not(:first-child){
+  border-top: 1px solid #000;
+  padding-top: 24px;
+} 
+
+.accordion-trigger {
+  width: 100%;
+  background-color: transparent;
+}
+
+.accordion-title {
+  justify-content: space-between;
+}
+
+.accordion-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url(../images/icon-minus.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
