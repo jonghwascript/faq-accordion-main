@@ -222,7 +222,7 @@ button {
   flex-shrink: 0;
   width: 1.875rem;
   height: 1.875rem;
-  background-image: url(../images/icon-minus.svg);
+  background-image: url(./images/icon-minus.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -238,7 +238,7 @@ button {
 
 
 .accordion-trigger[aria-expanded="true"] .accordion-icon {
-  background-image: url(../images/icon-plus.svg);
+  background-image: url(./images/icon-plus.svg);
 }
 
 .accordion-panel[hidden] {
