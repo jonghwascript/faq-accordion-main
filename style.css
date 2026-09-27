@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
   src: url(./fonts/static/WorkSans-Regular.ttf);
   font-style: normal;
   font-weight: 400;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
   src: url(./fonts/static/WorkSans-SemiBold.ttf);
   font-style: normal;
   font-weight: 600;
@@ -22,27 +22,10 @@
 }
 
 @font-face {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans";
   src: url(./fonts/static/WorkSans-Bold.ttf);
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: "Work Sans", sans-serif;
-  src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Work Sans", sans-serif;
-  src: url('./fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -161,7 +144,7 @@ body {
 }
 
 .header-title {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', sans-serif;
   font-size: clamp(2rem, calc(0.676rem + 5.882vw), 3.5rem);
   font-weight: 700;
   color: var(--Purple-950);
@@ -179,6 +162,9 @@ body {
 .accordion-trigger {
   width: 100%;
   background-color: transparent;
+  border-style: none;
+  padding-inline: 0;
+  margin-inline: 0;
 }
 
 .accordion-trigger:focus .accordion-icon,
@@ -190,26 +176,21 @@ body {
   outline: 4px solid transparent;
 }
 
-button {
-  border-style: none;
-}
-
 .accordion button::-moz-focus-inner {
   border: 0;
 }
 
 .accordion-title {
-  justify-content: space-between;
-  font-family: 'Work Sans';
+  font-family: "Work Sans", sans-serif;
   font-size: clamp(1rem, calc(0.89rem + 0.49vw), 1.125rem);
   font-weight: 700;
   color: var(--Purple-950);
 
   display: flex;
   align-items: center;
-  text-align: left;
-  flex-grow: 1;
+  justify-content: space-between;
   gap: 1.5rem;
+  text-align: left;
 
   border: 0.125rem solid transparent;
 }
@@ -229,7 +210,7 @@ button {
 }
 
 .accordion-panel p {
-  font-family: 'Work Sans';
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: var(--Purple-600);
@@ -246,6 +227,7 @@ button {
 }
 
 .attribution {
+  font-family: "Work Sans", sans-serif;
   font-size: 0.6875rem;
   text-align: center;
 }
