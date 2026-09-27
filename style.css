@@ -127,14 +127,14 @@ button {
   border: 0;
 }
 
-body{
+body {
   background-color: var(--Purple-100);
   background-image: url(./images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
 
-  @media (min-width: 1208px){
+  @media (min-width: 64rem) {
     background-image: url(./images/background-pattern-desktop.svg);
   }
 }
@@ -146,12 +146,12 @@ body{
   max-inline-size: clamp(23.4375rem, calc(11.0294rem + 55.147vw), 37.5rem);
   --padding: clamp(1.5rem, calc(0.6176rem + 3.922vw), 2.5rem);
   --space: clamp(1.5rem, calc(1.059rem + 1.961vw), 2rem);
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .header {
   justify-content: start;
-  --space: 24px;
+  --space: 1.5rem;
 }
 
 .header-icon {
@@ -183,7 +183,7 @@ body{
 
 .accordion-trigger:focus .accordion-icon,
 .accordion-trigger:hover .accordion-icon {
-  border-color: hsl(216deg 94% 43%);
+  border-color: #0759d5;
 }
 
 .accordion-trigger:focus {
@@ -209,12 +209,12 @@ button {
   align-items: center;
   text-align: left;
   flex-grow: 1;
-  gap: 24px;
+  gap: 1.5rem;
 
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
 }
 
-.accordion-trigger:focus-visible .accordion-title{
+.accordion-trigger:focus-visible .accordion-title {
   border-color: var(--Violet-600);
 }
 
@@ -241,8 +241,6 @@ button {
   background-image: url(../images/icon-plus.svg);
 }
 
-
-/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
 .accordion-panel[hidden] {
   display: none;
 }
@@ -253,5 +251,5 @@ button {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #3e52a3;
 }
