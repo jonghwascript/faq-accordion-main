@@ -86,7 +86,7 @@ h1,
 h2,
 p {
   margin: 0;
-  padding: 9;
+  padding: 0;
 }
 
 *,
@@ -203,7 +203,7 @@ body {
   flex-shrink: 0;
   width: 1.875rem;
   height: 1.875rem;
-  background-image: url(./images/icon-minus.svg);
+  background-image: url(./images/icon-plus.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -219,7 +219,7 @@ body {
 
 
 .accordion-trigger[aria-expanded="true"] .accordion-icon {
-  background-image: url(./images/icon-plus.svg);
+  background-image: url(./images/icon-minus.svg);
 }
 
 .accordion-panel[hidden] {
