@@ -1,3 +1,63 @@
+:root {
+  --Purple-950: #301534;
+  --Purple-600: #8B6990;
+  --Purple-100: #F8EEFF;
+  --Violet-600: #AD28EB;
+}
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url(./fonts/static/WorkSans-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url(./fonts/static/WorkSans-SemiBold.ttf);
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url(./fonts/static/WorkSans-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url('./fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+.cover {
+  --space: var(--s1, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  padding: var(--space);
+}
+
+.cover>* {
+  margin-block: var(--s1, 1.5rem);
+}
+
 .stack {
   --space: 1.5rem;
   display: flex;
@@ -11,7 +71,6 @@
   margin-block: 0;
 }
 
-
 .center {
   box-sizing: content-box;
   max-inline-size: 60ch;
@@ -21,7 +80,6 @@
 }
 
 .box {
-
   --padding: 1.5rem;
   padding: var(--padding);
   border: 1px solid #e2e8f0;
@@ -31,36 +89,6 @@
 
   outline: 0.125rem solid transparent;
   outline-offset: -0.125rem;
-}
-
-.box[data-invert='true'] {
-  background-color: #1e293b;
-  color: #ffffff;
-  border-color: #1e293b;
-}
-
-.box[data-padding='none'] {
-  --padding: 0;
-}
-
-.box[data-padding='small'] {
-  --padding: 0.75rem;
-}
-
-.box[data-padding='normal'] {
-  --padding: 1rem;
-}
-
-.box[data-padding='large'] {
-  --padding: 3rem;
-}
-
-.box[data-border='none'] {
-  border: none;
-}
-
-.box[data-radius='none'] {
-  border-radius: 0;
 }
 
 .cluster {
@@ -99,6 +127,18 @@ button {
   border: 0;
 }
 
+body{
+  background-color: var(--Purple-100);
+  background-image: url(./images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media (min-width: 1208px){
+    background-image: url(./images/background-pattern-desktop.svg);
+  }
+}
+
 
 #main {
   box-sizing: border-box;
@@ -106,41 +146,112 @@ button {
   max-inline-size: clamp(23.4375rem, calc(11.0294rem + 55.147vw), 37.5rem);
   --padding: clamp(1.5rem, calc(0.6176rem + 3.922vw), 2.5rem);
   --space: clamp(1.5rem, calc(1.059rem + 1.961vw), 2rem);
+  border-radius: 8px;
 }
 
 .header {
   justify-content: start;
+  --space: 24px;
+}
 
-  .header-icon {
-    width: clamp(1.5rem, calc(0.893rem + 2.696vw), 2.188rem);
-    height: auto;
-    aspect-ratio: 1;
-  }
+.header-icon {
+  width: clamp(1.5rem, calc(0.893rem + 2.696vw), 2.188rem);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.header-title {
+  font-family: 'Work Sans';
+  font-size: clamp(2rem, calc(0.676rem + 5.882vw), 3.5rem);
+  font-weight: 700;
+  color: var(--Purple-950);
 }
 
 .accordion {
   --space: 1.5rem;
 }
 
-.accordion > h2:not(:first-child){
-  border-top: 1px solid #000;
-  padding-top: 24px;
-} 
+.accordion>h2:not(:first-child) {
+  border-top: 1px solid var(--Purple-100);
+  padding-top: 1.5rem;
+}
 
 .accordion-trigger {
   width: 100%;
   background-color: transparent;
 }
 
+.accordion-trigger:focus .accordion-icon,
+.accordion-trigger:hover .accordion-icon {
+  border-color: hsl(216deg 94% 43%);
+}
+
+.accordion-trigger:focus {
+  outline: 4px solid transparent;
+}
+
+button {
+  border-style: none;
+}
+
+.accordion button::-moz-focus-inner {
+  border: 0;
+}
+
 .accordion-title {
   justify-content: space-between;
+  font-family: 'Work Sans';
+  font-size: clamp(1rem, calc(0.89rem + 0.49vw), 1.125rem);
+  font-weight: 700;
+  color: var(--Purple-950);
+
+  display: flex;
+  align-items: center;
+  text-align: left;
+  flex-grow: 1;
+  gap: 24px;
+
+  border: 2px solid transparent;
+}
+
+.accordion-trigger:focus-visible .accordion-title{
+  border-color: var(--Violet-600);
 }
 
 .accordion-icon {
+  flex-shrink: 0;
   width: 1.875rem;
   height: 1.875rem;
   background-image: url(../images/icon-minus.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.accordion-panel p {
+  font-family: 'Work Sans';
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Purple-600);
+  line-height: 1.5rem;
+}
+
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  background-image: url(../images/icon-plus.svg);
+}
+
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
