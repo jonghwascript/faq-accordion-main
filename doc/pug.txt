@@ -1,0 +1,31 @@
+| .cover
+  main#main.center.box.stack
+    header.cluster.header
+      img.header-icon(src="./images/icon-star.svg", alt)
+      h1.header-title
+    #accordionGroup.accordion.stack
+      h2
+        button.accordion-trigger#accordion1id(type="button", aria-expanded="true", aria-controls="sect1")
+          span.accordion-title
+            span.accordion-icon
+      #sect1.accordion-panel(role="region", aria-labelledby="accordion1id")
+        p.          
+      h2
+        button.accordion-trigger#accordion2id(type="button", aria-expanded="false", aria-controls="sect2")
+          span.accordion-title
+            span.accordion-icon
+      #sect2.accordion-panel(role="region", aria-labelledby="accordion2id", hidden)
+        p.
+      h2
+        button.accordion-trigger#accordion3id(type="button", aria-expanded="false", aria-controls="sect3")
+          span.accordion-title
+            span.accordion-icon
+      #sect3.accordion-panel(role="region", aria-labelledby="accordion3id", hidden)
+        p.                    
+      h2
+        button.accordion-trigger#accordion4id(type="button", aria-expanded="false", aria-controls="sect4")
+          span.accordion-title
+            span.accordion-icon
+      #sect4.accordion-panel(role="region", aria-labelledby="accordion4id", hidden)
+        p.          
+  footer.attribution
