@@ -37,6 +37,37 @@ Download or clone the project and open `index.html` in a browser. No dependency 
 
 Use Tab and Shift+Tab to move between question buttons, then press Enter or Space to toggle an answer.
 
+### Storybook and Chromatic
+
+Use Node.js 22 and npm. Install the locked dependencies and start Storybook:
+
+```sh
+npm ci
+npm run storybook
+```
+
+Open http://localhost:6006. `Components/Accordion` includes Default, AllClosed,
+and AllOpen stories. The initial-state control resets the rendered accordion;
+clicks toggle individual answers without changing that control. The stories reuse
+the markup in `index.html`, preserve its accessibility attributes, and load
+`style.css` plus its fonts and images through Vite.
+
+Build the static site with `npm run build-storybook`; output goes to the ignored
+`storybook-static/` directory.
+
+To publish from PowerShell:
+
+```powershell
+$env:CHROMATIC_PROJECT_TOKEN = "YOUR_PROJECT_TOKEN"
+npm run chromatic
+```
+
+Alternatively, run `npm run chromatic -- --project-token=YOUR_PROJECT_TOKEN`.
+Do not commit the token. For automatic publishing, add the repository Actions
+secret `CHROMATIC_PROJECT_TOKEN`, then push the configuration and `package-lock.json`.
+The Chromatic workflow runs on pushes and builds Storybook before uploading.
+It exits after upload; remove `--exit-once-uploaded` to wait for visual test results.
+
 ## My process
 
 ### Built with

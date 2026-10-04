@@ -1,0 +1,17 @@
+{
+  "name": "faq-accordion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic"
+  },
+  "devDependencies": {
+    "@storybook/html-vite": "10.6.1",
+    "chromatic": "18.10.2",
+    "storybook": "10.6.1",
+    "vite": "6.4.3"
+  }
+}

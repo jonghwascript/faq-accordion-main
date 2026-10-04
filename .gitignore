@@ -22,6 +22,7 @@ npm-debug.log*
 /coverage
 
 # Production
+/storybook-static/
 /build
 /dist
 /.next
@@ -45,3 +46,4 @@ README-template.md
 style-guide.md
 design/*
 LESSON.md
+storybook-static
