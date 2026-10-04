@@ -2,7 +2,7 @@
 const config = {
   stories: ['../src/stories/**/*.stories.js'],
   framework: { name: '@storybook/html-vite', options: {} },
-  addons: [],
+  addons: ['@storybook/addon-docs'],
 };
 
 export default config;

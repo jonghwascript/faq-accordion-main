@@ -47,7 +47,9 @@ npm run storybook
 ```
 
 Open http://localhost:6006. `Components/Accordion` includes Default, AllClosed,
-and AllOpen stories. The initial-state control resets the rendered accordion;
+and AllOpen stories, plus an automatically generated Docs page. Autodocs is enabled
+for all stories through `@storybook/addon-docs` and the global `autodocs` tag.
+The initial-state control resets the rendered accordion;
 clicks toggle individual answers without changing that control. The stories reuse
 the markup in `index.html`, preserve its accessibility attributes, and load
 `style.css` plus its fonts and images through Vite.

@@ -9,6 +9,7 @@
     "chromatic": "npx chromatic"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "10.6.1",
     "@storybook/html-vite": "10.6.1",
     "chromatic": "18.10.2",
     "storybook": "10.6.1",
